@@ -11,7 +11,7 @@ Sass template project.
 2. cd STP or change directory name
 3. npm install
 
-#### **Compile SCCS**
+#### **Compile SCSS**
 npm run sass
 
 _What is more ..._
