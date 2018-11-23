@@ -3,7 +3,7 @@
 Sass template project.
 
 [About Developer](https://rickjw.herokuapp.com/)
-![My Site](/public/graphics/example.png)
+![My Site](/public/graphics/logo.png)
 
 #### **Installation**
 

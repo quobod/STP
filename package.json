@@ -4,17 +4,21 @@
   "description": "Sass starter",
   "main": "app.js",
   "scripts": {
+    "cls": "cls",
     "test": "mocha test",
-	"sass": "node-sass -w public/scss/ -o public/css/ --recursive --output-style compressed --indent-type tab --error-bell"
+    "sass": "cls & node-sass -w src/scss/ -o public/css/ --recursive --output-style compressed --indent-type tab --error-bell"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/quobod/STP.git"
+    "url": "https://github.com/quobod/STP.git"
   },
   "author": "Rick Walker",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/quobod/STP/issues"
   },
-  "homepage": "https://github.com/quobod/STP#readme"
+  "homepage": "https://github.com/quobod/STP#readme",
+  "dependencies": {
+    "node-sass": "^4.10.0"
+  }
 }
