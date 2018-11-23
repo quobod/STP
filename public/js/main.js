@@ -37,33 +37,7 @@ function toggleMenu() {
   }
 }
 
-/* Video list Functionality */
-
-// Register click event with all video item
-if (document.querySelector('.video-list')) {
-	const items = document.querySelectorAll('.list-item-link');
-	
-	items.forEach(item => {		
-		item.addEventListener('click', () => {			
-			const ytPlayer = document.querySelector('.yt-player');
-			ytPlayer.src = `https://www.youtube.com/embed/${item.getAttribute('data-ytitem')}`;
-		});
-	});
-}
-
-/* Services Functionality */
-
-// Capture the content element's innerHTML
-let contentInnerHtml;
-
-if (getElement('services')) {
-	contentInnerHtml = getElement('content').innerHTML;
-	getElement('drconverterModal').style.display = 'none';
-	getElement('distanceCalculatorModal').style.display = 'none';
-	getElement('mychartDataModal').style.display = 'none';
-}
-
-/* Close Button Functionality */
+/* Callout Close Button Functionality */
 
 // Get all close buttons
 const closeButtons = document.querySelectorAll('.close-button');
