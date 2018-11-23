@@ -17,5 +17,6 @@ npm run sass
 _What is more ..._
 
 - Compiling SCSS using [**_Node-Sass_**](https://github.com/sass/node-sass)
+- Views template engine using [**_Express-Handlebars_**](https://github.com/ericf/express-handlebars)
 	
 	
