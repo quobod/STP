@@ -4,7 +4,8 @@
   "description": "Sass starter",
   "main": "app.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha test",
+	"sass": "node-sass -w public/scss/ -o public/css/ --recursive --output-style compressed --indent-type tab --error-bell"
   },
   "repository": {
     "type": "git",
