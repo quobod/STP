@@ -1,0 +1,71 @@
+@import 'menu-mobile-md';
+@import 'menu-mobile-sm';
+@import 'menu-mobile-tn';
+@import 'services-mobile-mds';
+@import 'services-mobile-height-sm';
+@import 'services-mobile-sm';
+@import 'about-mobile-md';
+@import 'projects-mobile-md';
+@import 'videos-mobile-sm';
+@import 'videos-mobile-md';
+@import 'videos-mobile-lg';
+@import 'profile-mobile-xl';
+@import 'profile-mobile-md';
+@import 'profile-mobile-sm';
+@import 'chart-mobile-md';
+@import 'chart-mobile-sm';
+@import 'modal-mobile-md';
+@import 'modal-mobile-sm';
+@import 'distancecalc-mobile-md';
+@import 'distancecalc-mobile-sm';
+@import 'main-mobile-sm';
+@import 'main-mobile-tn';
+@import 'projects-mobile-sm';
+@import 'projects-mobile-lg';
+@import 'projects-mobile-xl';
+@import 'about-mobile-sm';
+@import 'main-mobile-lg';
+@import 'main-mobile-xl';
+@import 'mobile-height-sm';
+@import 'login';
+@import 'login-desktop-md';
+@import 'login-mobile-sm';
+@import 'registration-desktop-mds';
+@import 'home-desktop-xl';
+
+/* // Widescreens */
+@include mediaXl {
+	
+}
+
+/* // Desktops & Laptops */
+@include mediaMd {
+	main {
+			
+		min-height: calc(100vh - 60px);		
+		
+	}
+}
+
+@include mediaLg {
+
+}
+
+/* // Tablets & Small Laptops */
+@include mediaMd {	
+		
+}
+
+/* // Smartphones */
+@include mediaSm {
+	
+}
+
+@include mediaTn {
+
+}
+
+@include mediaHeightSm {
+	
+}
+
