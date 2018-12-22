@@ -1,0 +1,76 @@
+#videos {
+	padding: 2rem 0.5rem 0 0.5rem;
+	margin: 0;
+	display: grid;
+	justify-content: center;
+	grid-row-gap: 0.7rem;
+	grid-template-areas:
+	'ytsearch-form ytsearch-form ytsearch-form ytsearch-form ytsearch-form ytsearch-form'
+	'. . . . . .'
+	'search-results search-results search-results search-results search-results search-results';
+	
+	.ytsearch-form {
+		grid-area: ytsearch-form;		
+		padding: 0;
+		margin: -2rem 0 0 0;
+		
+		.input {
+			padding: 0.5rem;
+			margin: 0 0 0 8rem;
+			min-height: 1.4rem;
+			width: 50vw;	
+			border: none;
+			border-radius: 10px;
+		}
+	}
+	
+	.search-results {
+		grid-area: search-results;
+		width: 90vw;		
+		padding: 0;
+		margin: -10rem 0 0 0;
+		display: grid;
+		grid-column-gap: 1.1rem;
+		justify-content: center;
+		grid-template-areas:
+		'video-player video-player video-player video-list video-list'
+		'. . . video-list video-list'
+		'. . . video-list video-list';
+		
+		.video-list {
+			grid-area: video-list;
+			margin: 0;
+			padding: 0;			
+			list-style: none;
+			max-height: 70vh;
+			overflow: scroll;
+			
+			li {
+				padding: 0 1rem 0 1rem;
+				border-radius: 10px;
+				background: rgba(#222, 0.1);
+			}
+			
+			.thumbnail {
+				border: none;
+				border-radius: 10px;
+			}
+				
+			.list-item-link {
+				cursor: pointer;
+			}
+		}
+		
+		.video-player {
+			grid-area: video-player;
+			
+			.yt-player {
+				width: 50vw;
+				height: 70vh;
+				margin: 0;
+				padding: 0.2rem;
+				border: none;
+			}
+		}
+	}
+}

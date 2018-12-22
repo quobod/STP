@@ -1,4 +1,36 @@
-
+@import 'menu-mobile-md';
+@import 'menu-mobile-sm';
+@import 'menu-mobile-tn';
+@import 'services-mobile-mds';
+@import 'services-mobile-height-sm';
+@import 'services-mobile-sm';
+@import 'about-mobile-md';
+@import 'projects-mobile-md';
+@import 'videos-mobile-sm';
+@import 'videos-mobile-md';
+@import 'videos-mobile-lg';
+@import 'profile-mobile-xl';
+@import 'profile-mobile-md';
+@import 'profile-mobile-sm';
+@import 'chart-mobile-md';
+@import 'chart-mobile-sm';
+@import 'modal-mobile-md';
+@import 'modal-mobile-sm';
+@import 'distancecalc-mobile-md';
+@import 'distancecalc-mobile-sm';
+@import 'main-mobile-sm';
+@import 'main-mobile-tn';
+@import 'projects-mobile-sm';
+@import 'projects-mobile-lg';
+@import 'projects-mobile-xl';
+@import 'about-mobile-sm';
+@import 'main-mobile-lg';
+@import 'main-mobile-xl';
+@import 'mobile-height-sm';
+@import 'login';
+@import 'login-desktop-md';
+@import 'login-mobile-sm';
+@import 'registration-desktop-mds';
 
 /* // Widescreens */
 @include mediaXl {
@@ -8,31 +40,391 @@
 /* // Desktops & Laptops */
 @include mediaMd {
 	main {
-			
-		min-height: calc(100vh - 60px);		
+		padding: 4rem;
 		
+		/* @include border-with-radius; */
+		/* height: 100%; */
+		/* min-height: calc(100vh - 60px);		 */
+		align-items: center;
+		text-align: left;
+
+		.lg-heading {
+			line-height: 1;
+			margin: 4rem 0 1rem 0;
+		}
+		
+		.icons {
+			margin-top: 0.4rem;
+			
+			a {
+				padding: 0.4rem;
+				@include easeOut();
+				
+				&:hover {
+					color: $secondary-color;
+					@include easeOut();
+				}
+			}
+		}
+		
+		&#home {
+			overflow: scroll;
+			
+			h1 {
+				margin-top: 20vh;
+			}
+		}
+	}
+		
+	/* About View */
+	#about {
+		margin: 0 5vw 0 5vw;
+		max-width: 90vw;
+		width: 100%;
+		display: grid;
+		grid-gap: 0;
+		grid-template-areas:
+		'about-heading about-heading about-heading about-heading'
+		'. about-info about-info about-info';
+		
+		.about-info {
+			grid-area: about-info;
+			display: grid;
+			grid-template-areas:
+			'countdown countdown countdown countdown';
+			
+			.countdown {
+				margin: -10rem 0 0 0;
+				grid-area: countdown;
+				display: grid;
+				grid-column-gap: 0.8rem;
+				grid-template-areas:
+				'countdown-heading countdown-heading countdown-heading countdown-heading'
+				'days hours minutes seconds';
+					
+				.countdown-item {
+					border-radius: 10px;
+					background: rgba(darken($primary-color, 5), 0.4);
+					justify-content: center;
+					align-items: center;
+					text-align: center;
+					
+					span {
+						color: darken($secondary-color, 7);
+						font-size: 1.4rem;
+					}
+					
+					p {
+						padding: 1px;
+					}
+				}
+				
+				.countdown-heading {
+					grid-area: countdown-heading;
+					text-align: center;
+					font-size: 1.7rem;
+				}
+				
+				.days {
+					grid-area: days;
+				}
+				
+				.hours {
+					grid-area: hours;
+				}
+				
+				.minutes {
+					grid-area: minutes;
+				}
+				
+				.seconds {
+					grid-area: seconds;
+				}				
+			}
+		}
+		
+		.about-heading {
+			grid-area: about-heading;
+			margin: -6.4rem 0 0 0;
+			padding: 0;
+			
+			lg-heading, sm-heading {
+				margin: 0;
+				padding: 0;
+			}
+		}
+	}
+	
+	#profile {
+		display: grid;
+		overflow: auto;
+		margin: 0;
+		padding: 0;
+		justify-content: center;
+		grid-column-gap: 9.8rem;
+		grid-template-areas:
+		'avatar . . . .'
+		'avatar details details details details'
+		'avatar details details details details';
+		
+		.avatar {
+			grid-area: avatar;
+			padding: 0;
+			margin: 4rem 0 0 0;
+		}
+		
+		.details {
+			grid-area: details;
+			display: grid;
+			padding: 0;
+			margin: 0;
+			overflow: auto;
+			justify-content: center;
+			grid-row-gap: 0.2rem;
+			background: rgba(darken(#444, 11), 0.5);
+			grid-template-areas:
+			'first-name-title first-name-title first-name first-name'
+			'last-name-title last-name-title last-name last-name'
+			'nick-name-title nick-name-title nick-name nick-name'
+			'user-name-title user-name-title user-name user-name'
+			'display-name-title display-name-title display-name display-name'
+			'email-title email-title email email'
+			'gender-title gender-title gender gender'
+			'provider-title provider-title provider provider';
+			
+			input {
+				margin: 0.2rem 0 0.2rem 0;
+				padding: 0;
+				background: transparent;
+				color: #fff;
+				border: none;
+				max-width: 45vw;
+			}
+			
+			.first-name {
+				grid-area: first-name;
+				border: solid thin #77b;
+				border-top-right-radius: 5px;
+				border-bottom-right-radius: 5px;
+				border-left: none;
+				text-align: center;
+				
+			}
+			
+			.first-name-title {
+				grid-area: first-name-title;
+				border: solid thin #77b;
+				border-top-left-radius: 5px;
+				border-bottom-left-radius: 5px;
+				border-right: none;
+				text-align: center;
+			}
+			
+			.last-name {
+				grid-area: last-name;
+				border: solid thin #77b;
+				border-top-right-radius: 5px;
+				border-bottom-right-radius: 5px;
+				border-left: none;
+				text-align: center;
+			}
+			
+			.last-name-title {
+				grid-area: last-name-title;
+				border: solid thin #77b;
+				border-top-left-radius: 5px;
+				border-bottom-left-radius: 5px;
+				border-right: none;
+				text-align: center;
+			}
+			
+			.nick-name {
+				grid-area: nick-name;
+				border: solid thin #77b;
+				border-top-right-radius: 5px;
+				border-bottom-right-radius: 5px;
+				border-left: none;
+				text-align: center;
+			}
+			
+			.nick-name-title {
+				grid-area: nick-name-title;
+				border: solid thin #77b;
+				border-top-left-radius: 5px;
+				border-bottom-left-radius: 5px;
+				border-right: none;
+				text-align: center;
+			}
+			
+			.user-name {
+				grid-area: user-name;
+				border: solid thin #77b;
+				border-top-right-radius: 5px;
+				border-bottom-right-radius: 5px;
+				border-left: none;
+				text-align: center;
+			}
+			
+			.user-name-title {
+				grid-area: user-name-title;
+				border: solid thin #77b;
+				border-top-left-radius: 5px;
+				border-bottom-left-radius: 5px;
+				border-right: none;
+				text-align: center;
+			}
+			
+			.display-name {
+				grid-area: display-name;
+				border: solid thin #77b;
+				border-top-right-radius: 5px;
+				border-bottom-right-radius: 5px;
+				border-left: none;
+				text-align: center;
+			}
+			
+			.display-name-title {
+				grid-area: display-name-title;
+				border: solid thin #77b;
+				border-top-left-radius: 5px;
+				border-bottom-left-radius: 5px;
+				border-right: none;
+				text-align: center;
+			}
+			
+			.email {
+				grid-area: email;
+				border: solid thin #77b;
+				border-top-right-radius: 5px;
+				border-bottom-right-radius: 5px;
+				border-left: none;
+				text-align: center;
+			}
+			
+			.email-title {
+				grid-area: email-title;
+				border: solid thin #77b;
+				border-top-left-radius: 5px;
+				border-bottom-left-radius: 5px;
+				border-right: none;
+				text-align: center;
+			}
+			
+			.gender {
+				grid-area: gender;
+				border: solid thin #77b;
+				border-top-right-radius: 5px;
+				border-bottom-right-radius: 5px;
+				border-left: none;
+				text-align: center;
+			}
+			
+			.gender-title {
+				grid-area: gender-title;
+				border: solid thin #77b;
+				border-top-left-radius: 5px;
+				border-bottom-left-radius: 5px;
+				border-right: none;
+				text-align: center;
+			}
+			
+			.provider {
+				grid-area: provider;
+				border: solid thin #77b;
+				border-top-right-radius: 5px;
+				border-bottom-right-radius: 5px;
+				border-left: none;
+				text-align: center;
+			}
+			
+			.provider-title {
+				grid-area: provider-title;
+				border: solid thin #77b;
+				border-top-left-radius: 5px;
+				border-bottom-left-radius: 5px;
+				border-right: none;
+				text-align: center;
+			}
+		}
 	}
 }
 
 @include mediaLg {
-
+	/* The Close Button */
+	.chart-closer,
+	.calculator-closer,
+	.signin-closer,
+	.drconverter-closer {
+		margin: 0.3rem;
+	}
 }
 
 /* // Tablets & Small Laptops */
 @include mediaMd {	
-		
+	/* The Close Button */
+	.chart-closer,
+	.calculator-closer,
+	.signin-closer,
+	.drconverter-closer {
+		margin: 0.3rem;
+	}	
 }
 
 /* // Smartphones */
 @include mediaSm {
-	
+	/* The Close Button */
+	.chart-closer,
+	.calculator-closer,
+	.signin-closer,
+	.drconverter-closer {
+		margin: 0.3rem;
+	}	
 }
 
 @include mediaTn {
+	/* Main layout */
+	main {
+		padding: 0.7rem;
+		#home h1 {
+			margin-top: 4vh;
+		}
 
+		.lg-heading {
+			margin-top:0.3rem;
+			font-size: 5rem;
+		}
+	}
+
+	
+		
 }
 
 @include mediaHeightSm {
+	.global-menu {
+		.menu {
+			ul {
+				overflow: scroll;
+			}
+		}
+	}
 	
+	main {
+		padding: 0.4rem;
+		align-items: center;
+		text-align: center;
+
+		.lg-heading {
+			line-height: 1;
+			margin-bottom: 1rem;
+		}
+
+		&#home {
+			overflow: scroll;
+			
+			h1 {
+				margin-top: 20vh;
+			}
+		}
+	}
 }
 

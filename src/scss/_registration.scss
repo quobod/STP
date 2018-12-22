@@ -1,0 +1,57 @@
+#registration {
+	display: grid;
+	align-items: center;
+	justify-items: center;
+	text-align: left;
+	grid-auto-rows: auto;
+	margin: 0;
+	padding: 0;
+	
+	.register-form {
+		dislpay: grid;
+		align-items: center;
+		justify-items: center;
+		margin: 2rem 0 0 0;
+		padding: 0;
+		grid-auto-rows: auto;
+		
+		.input-group {
+			display: grid;
+			grid-row-gap: 0.2rem;
+			margin: auto auto 1rem auto;
+			padding: 0;
+			
+			input[type="text"],
+			input[type="password"],
+			input[type="email"] {
+				width: 70vw;
+				height: 26px;
+			}
+		}
+		
+		.input-group:nth-last-child(2) {
+			display: block;
+			padding: 0;
+			
+			h4 {
+				font-weight: bolder;
+				margin: 0;
+				padding: 0;
+			}
+		}
+		
+		.input-group:nth-last-child(1) {
+			.button {
+				border: none;
+				border-radius: 5px;
+				background: rgb(120, 120, 225);
+				color: #eee;
+				font-size: 1.0rem;
+				font-weight: bolder;
+				max-width: 25vw;
+				padding: 0.2rem;
+			}
+		}
+	}	
+
+}

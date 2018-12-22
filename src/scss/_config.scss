@@ -1,8 +1,11 @@
-$primary-color: #dde;
-$secondary-color: #99a;
-$thirdary-color: #779;
-$info-color: #555;
-$critical-color: #944;
+$primary-color: #444;
+$secondary-color: #eece1a;
+$thirdary-color: #9a9bab;
+/* $primary-color: #fff;
+$secondary-color: #1aceee;
+$thirdary-color: #ab9b9a; */
+$info-color: #a4a4a4;
+$critical-color: #eaa9a9;
 $show-home-image: true;
 $home-image: url('../graphics/background.jpg');
 $background-opacity: 0.8;
@@ -21,7 +24,6 @@ $background-opacity: 0.8;
 			background: $home-image;
 			background-repeat: no-repeat;
 			background-attachment: fixed;
-			background-position: -1.7rem -44rem;
 			background-size: cover;
 			
 			&:after {
@@ -121,19 +123,13 @@ $background-opacity: 0.8;
   }
 }
 
-@mixin mediaHeightMd {
-  @media screen and (max-height: 1004px)  {
-    @content;
-  }
-}
-
 @mixin mediaHeightSm {
   @media screen and (max-height: 502px)  {
     @content;
   }
 }
 
-@mixin mediaHeightXs {
+@mixin mediaHeightTn {
   @media screen and (max-height: 300px)  {
     @content;
   }
@@ -153,6 +149,8 @@ $background-opacity: 0.8;
 	border: 0.2em solid rgb(55,55,107);
 	border-radius: 6px;
 }
+
+
 
 
 /* Element layout over-flow */
